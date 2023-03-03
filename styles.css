@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right,rgb(0, 172, 218),rgb(0, 196, 158),rgb(0, 215, 117) );
+    overflow: hidden;
+    height:100vh;
+}
+
+.grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto)repeat(5, 100px);
+
+}
+
+
+
+button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+
+}
+button:hover{
+    background-color: rgba(255, 255, 255, 0.90)
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1 ;
+    background-color: rgba(0, 0, 0,0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding:10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.current{
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.previous{
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width:460px){
+
+    .grid{
+        grid-template-columns: repeat(4, 80px);
+        grid-template-rows: minmax(120px, auto)repeat(5, 80px);
+    
+    }
+    
+    
+}
+
+
+@media (max-width:290px){
+
+    .grid{
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: minmax(120px, auto)repeat(5, 80px);
+    
+    }
+    
+    button{
+        font-size: 1.2rem;
+    }
+    
+}
