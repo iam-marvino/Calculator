@@ -80,6 +80,7 @@ button:hover{
 @media (max-width:290px){
 
     .grid{
+        margin-top:3rem;
         grid-template-columns: repeat(4, 60px);
         grid-template-rows: minmax(120px, auto)repeat(5, 80px);
     
